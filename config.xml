@@ -30,9 +30,9 @@
     <!-- Core plugins -->
 
 
-    <plugin name="org.apache.cordova.dialogs" source="pgb" spec="0.3.0" />
-<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
-<plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
 
 
 
