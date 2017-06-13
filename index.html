@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PERX - Cashier</title>
+<!-- Include jQuery Mobile stylesheets -->
+
+
+<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<!-- Include the jQuery library -->
+<script src="js/jquery.3.0.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+
+</head>
+
+<body>
+<div data-role="page" data-theme="d" class="login-page">
+
+<div>
+<input type="text" class="pi-username" id="pi-username" placeholder="Username"/>
+</div>
+<div>
+<input type="password" class="pi-password" id="pi-password" placeholder="Password"/>
+</div>
+<input type="submit"  value="Log in" class="btn-login" id="btn-login"/>
+<div class="div-forget-pwd">
+<a href="forgot-password.html" class="forgot-link">Forget Password</a>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+	
+		alert("Page loaded");
+	
+			 
+			 
+			 $('#btn-login').click(function(){
+				 alert("login button hit");
+				 var email = $('#pi-username').val();
+				 var pwd = $('#pi-password').val();
+						$.ajax({
+									type: "POST",
+									url: "http://premiumincentives.biz/mobi/api.php",
+									data: {email:email, pwd:pwd},
+									dataType:"json",
+									success: function(msg){
+							if (msg.status == 1001){
+								alert("It is working");
+							} else{
+								alert("Something went wrong");
+							}
+								
+																					
+								
+									}
+									
+								});
+});
+				
+});
+</script>
+</body>
+</html>

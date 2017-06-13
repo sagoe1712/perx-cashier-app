@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Incentives - Staff</title>
+<!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<!-- Include the jQuery library -->
+<script src="js/jquery.3.0.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+
+<script> 
+  
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    var exitpage =confirm("Are you sure you want to quit?");
+    if (exitpage==true)
+  {
+ navigator.app.exitApp();
+}
+
+}
+</script>
+
+<script>
+$(document).ready(function(){
+	
+		function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+                   
+            }
+			 document.addEventListener("offline", function(){ alert("Premium Incentives Requires The Internet") }, false);
+});
+</script>
+</head>
+
+<body>
+<div data-role="page" data-theme="d" class="login-page">
+<div class="splash-img">
+<img src="images/perx.png"/>
+</div>
+</div>
+</body>
+</html>
